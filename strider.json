@@ -1,12 +1,12 @@
 {
   "provider": {
-    "cache": false
+    "cache": true
   },
   "plugins": [{
     "id": "node",
     "enabled": true,
     "config": {
-      "caching": "none",
+      "caching": "strict",
       "test": "make test",
       "global": [
         "jshint",
