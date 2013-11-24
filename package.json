@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "color-convert": "~0.3.1",
-    "color-parser": "~0.0.1",
+    "color-parser": "git+https://github.com/jazzui/color-parser",
     "expect.js": "~0.2.0"
   },
   "author": "Jared Forsyth <jared@jaredforsyth.com>",
