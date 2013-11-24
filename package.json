@@ -2,7 +2,12 @@
   "name": "color",
   "version": "0.0.1",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "blanket": {
+      "pattern": "index.js",
+      "onlyCwd": true,
+      "data-cover-never": "node_modules"
+    }
   },
   "devDependencies": {
     "expect.js": "~0.2.0"
