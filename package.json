@@ -1,0 +1,22 @@
+{
+  "name": "color",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "make test"
+  },
+  "devDependencies": {
+    "expect.js": "~0.2.0"
+  },
+  "description": "A color object that knows about different schemas. Stores as rgb internally.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "color-convert": "~0.3.1",
+    "color-parser": "~0.0.1",
+    "expect.js": "~0.2.0"
+  },
+  "author": "Jared Forsyth <jared@jaredforsyth.com>",
+  "license": "Apache v2"
+}

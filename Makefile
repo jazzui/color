@@ -8,4 +8,10 @@ components: component.json
 clean:
 	rm -fr build components template.js
 
-.PHONY: clean
+test:
+	@mocha -R spec
+
+lint:
+	@jshint --verbose *.json *.js test/*.js
+
+.PHONY: clean test

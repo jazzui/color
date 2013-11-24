@@ -4,11 +4,15 @@
   "description": "A color object that knows about different schemas. Stores as rgb internally.",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "jazzui/color-parser": "*"
+  },
   "development": {},
   "license": "MIT",
   "main": "index.js",
   "scripts": [
-    "index.js"
-  ]
+    "index.js",
+    "colors.js"
+  ],
+  "remotes": []
 }
