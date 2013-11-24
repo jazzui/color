@@ -24,6 +24,12 @@ describe('Color should handle', function () {
   })
 })
 
+describe('set through rgb', function () {
+  it('should work', function () {
+    expect(new Color().rgb(255, 51, 119).rgb().toList()).to.eql([255, 51, 119])
+  })
+})
+
 describe('Color should nicely output', function () {
   var color, rc
   beforeEach(function () {

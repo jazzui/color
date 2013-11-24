@@ -93,10 +93,12 @@ Color.prototype = {
       var rgb = colors.fromHsl(this)
       return colors.Rgb(rgb.r, rgb.g, rgb.b)
     }
-    if (argments.length >= 3) {
+    if (arguments.length >= 3) {
       this.set([].slice.call(arguments), 'rgb')
+    } else {
+      this.set(color, 'rgb')
     }
-    this.set(color, 'rgb')
+    return this
   },
   rgba: function (color) {
     if (arguments.length !== 0) {
@@ -109,10 +111,12 @@ Color.prototype = {
     if (arguments.length === 0) {
       return colors.Hsl(this.h * 360, this.s * 100, this.l * 100)
     }
-    if (argments.length >= 3) {
+    if (arguments.length >= 3) {
       this.set([].slice.call(arguments), 'hsl')
+    } else {
+      this.set(color, 'hsl')
     }
-    this.set(color, 'hsl')
+    return this
   },
   hsla: function (color) {
     if (arguments.length !== 0) {
