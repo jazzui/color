@@ -1,0 +1,14 @@
+{
+  "name": "color",
+  "repo": "jazzui/color",
+  "description": "A color object that knows about different schemas. Stores as rgb internally.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
