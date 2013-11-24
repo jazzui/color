@@ -5,7 +5,8 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "jazzui/color-parser": "*"
+    "jazzui/color-parser": "*",
+    "timoxley/color-convert": "*"
   },
   "development": {},
   "license": "MIT",
