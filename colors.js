@@ -10,6 +10,11 @@ module.exports = {
   fromHsl: fromHsl
 }
 
+function hexDigit(number) {
+  var c = '0123456789abcdef'
+  return c[parseInt(number/16)] + c[number % 16]
+}
+
 function Rgb(r, g, b) {
   return {
     r:r,
@@ -20,20 +25,29 @@ function Rgb(r, g, b) {
     },
     toString: function () {
       return 'rgb(' + this.toList().join(', ') + ')'
+    },
+    toHex: function () {
+      return '#' + this.toList().map(hexDigit).join('')
     }
   }
 }
 
 function Rgba(r, g, b, a) {
   return {
-    r:r,
-    g:g,
-    b:b,
+    r: r,
+    g: g,
+    b: b,
+    a: a,
     toList: function () {
       return [this.r, this.g, this.b, this.a]
     },
     toString: function () {
       return 'rgba(' + this.toList().join(', ') + ')'
+    },
+    toHex: function () {
+      var items = this.toList()
+      items[3] *= 255
+      return '#' + items.map(hexDigit).join('')
     }
   }
 }

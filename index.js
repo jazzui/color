@@ -90,7 +90,7 @@ Color.prototype = {
   },
   rgb: function (color) {
     if (arguments.length === 0) {
-      var rgb = utils.toRgb(this.color)
+      var rgb = colors.fromHsl(this)
       return colors.Rgb(rgb.r, rgb.g, rgb.b)
     }
     if (argments.length >= 3) {
@@ -102,7 +102,7 @@ Color.prototype = {
     if (arguments.length !== 0) {
       return this.rgb.apply(this, arguments)
     }
-    var rgb = utils.toRgb(this.color)
+    var rgb = colors.fromHsl(this)
     return colors.Rgba(rgb.r, rgb.g, rgb.b, this.a)
   },
   hsl: function (color) {
