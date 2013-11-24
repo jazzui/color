@@ -12,7 +12,7 @@ module.exports = {
 
 function hexDigit(number) {
   var c = '0123456789abcdef'
-  return c[parseInt(number/16)] + c[number % 16]
+  return c[parseInt(number/16)] + c[parseInt(number) % 16]
 }
 
 function Rgb(r, g, b) {
