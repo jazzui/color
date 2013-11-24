@@ -24,7 +24,7 @@ function Rgb(r, g, b) {
       return [this.r, this.g, this.b]
     },
     toString: function () {
-      return 'rgb(' + this.toList().join(', ') + ')'
+      return 'rgb(' + parseInt(this.r) + ', ' + parseInt(this.g) + ', ' + parseInt(this.b) + ')'
     },
     toHex: function () {
       return '#' + this.toList().map(hexDigit).join('')
@@ -42,7 +42,11 @@ function Rgba(r, g, b, a) {
       return [this.r, this.g, this.b, this.a]
     },
     toString: function () {
-      return 'rgba(' + this.toList().join(', ') + ')'
+      var vars = this.toList()
+      vars[3] *= 100
+      vars = vars.map(parseInt)
+      vars[3] /= 100
+      return 'rgba(' + parseInt(this.r) + ', ' + parseInt(this.g) + ', ' + parseInt(this.b) + ', ' + parseInt(this.a*100)/100 + ')'
     },
     toHex: function () {
       var items = this.toList()
@@ -61,7 +65,7 @@ function Hsl(h, s, l) {
       return [this.h, this.s, this.l]
     },
     toString: function () {
-      return 'hsl(' + this.h + ', ' + this.s + '%, ' + this.l + '%)'
+      return 'hsl(' + parseInt(this.h) + ', ' + parseInt(this.s) + '%, ' + parseInt(this.l) + '%)'
     }
   }
 }
@@ -76,7 +80,7 @@ function Hsla(h, s, l, a) {
       return [this.h, this.s, this.l, this.a]
     },
     toString: function () {
-      return 'hsla(' + this.h + ', ' + this.s + '%, ' + this.l + '%, ' + this.a + ')'
+      return 'hsla(' + parseInt(this.h) + ', ' + parseInt(this.s) + '%, ' + parseInt(this.l) + '%, ' + parseInt(this.a * 100)/100 + ')'
     }
   }
 }
