@@ -17,6 +17,9 @@ describe('Color should handle', function () {
     it('an object with alpha', function () {
       expect(new Color({h: 340/360, s: 1, l: .6, a: 1}).toString()).to.equal(res)
     })
+    it('a string', function () {
+      expect(new Color(res).toString()).to.equal(res)
+    })
   })
 
   it('an rgb array', function () {
