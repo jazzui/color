@@ -129,5 +129,3 @@ Color.prototype = {
   }
 }
 
-
-

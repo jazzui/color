@@ -48,9 +48,9 @@ function Rgba(r, g, b, a) {
       vars[3] /= 100
       return 'rgba(' + parseInt(this.r) + ', ' + parseInt(this.g) + ', ' + parseInt(this.b) + ', ' + parseInt(this.a*100)/100 + ')'
     },
+    // the alpha just gets dropped
     toHex: function () {
-      var items = this.toList()
-      items[3] *= 255
+      var items = this.toList().slice(0, 3)
       return '#' + items.map(hexDigit).join('')
     }
   }
